@@ -1,0 +1,11 @@
+{
+  "push": {
+    "conversation_iden": {"package_name":"com.whatsapp","tag":"template@s.whatsapp.net","id":1},
+    "message": "test",
+    "package_name": "com.pushbullet.android",
+    "source_user_iden": "template",
+    "target_device_iden": "template",
+    "type": "messaging_extension_reply"
+  },
+  "type": "push"
+}

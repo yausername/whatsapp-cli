@@ -18,6 +18,7 @@ Interactive(Curses) Mode -
 ![](whatsapp-cli.gif)
 
 
+
 Command Line Mode - 
 
 	Usage: __main__.py [OPTIONS] COMMAND [ARGS]...

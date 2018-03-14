@@ -6,7 +6,19 @@ This CLI uses [Pushbullet APIs](https://docs.pushbullet.com/) to receive and sen
 
 Pushbullet API token can be generated from [here](https://www.pushbullet.com/#settings/account)
 
-Works with python2.7 
+Works with python2.7
+
+Interactive(Curses) Mode - 
+
+    Usage: __main__.py [OPTIONS]
+    
+    Options:
+      --token TEXT  Pushbullet API token  [required]
+
+![](whatsapp-cli.gif)
+
+
+Command Line Mode - 
 
 	Usage: __main__.py [OPTIONS] COMMAND [ARGS]...
 

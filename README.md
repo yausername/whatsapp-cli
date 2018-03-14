@@ -8,17 +8,17 @@ Pushbullet API token can be generated from [here](https://www.pushbullet.com/#se
 
 Works with python2.7 
 
-Usage: __main__.py [OPTIONS] COMMAND [ARGS]...
+	Usage: __main__.py [OPTIONS] COMMAND [ARGS]...
 
-Options:
-  --token TEXT  Pushbullet API token  [required]
-  --help        Show this message and exit.
+	Options:
+	  --token TEXT  Pushbullet API token  [required]
+	  --help        Show this message and exit.
 
-Commands:
-  add    Add a contact
-  read   Read messages from a person/group
-  send   Send message to a person/group
-  users  List all contacts
+	Commands:
+	  add    Add a contact
+	  read   Read messages from a person/group
+	  send   Send message to a person/group
+	  users  List all contacts
 
 Commands Reference
 

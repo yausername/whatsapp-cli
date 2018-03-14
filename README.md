@@ -17,7 +17,7 @@ Interactive(Curses) Mode -
 
 ![](whatsapp-cli.gif)
 
-
+---
 
 Command Line Mode - 
 

@@ -1,7 +1,7 @@
 import click
 from click import BadParameter
 
-from feed import PBFeeder
+from whatsappCli.feed import PBFeeder
 from curses_ui import CursesUI
 
 feeder = None

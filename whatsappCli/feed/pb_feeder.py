@@ -10,6 +10,7 @@ from feeder import Feeder
 import pb_stream
 from pb_stream import contacts
 from pb_stream import config
+from pkg_resources import resource_string
 
 class PBFeeder(Feeder):
     """ whatsapp chat feed using pushbullet"""
@@ -18,6 +19,7 @@ class PBFeeder(Feeder):
         self.pb_token = pb_token
         self.dir = "/tmp"
         self.starting_lines = 10
+        self.reply_template = json.loads(resource_string(__name__, 'data/reply.json'), object_pairs_hook=OrderedDict)
         self.__pb_start_stream()
 
     def __pb_start_stream(self):
@@ -43,8 +45,7 @@ class PBFeeder(Feeder):
 
     def post(self, user, msg):
         tag = self.resolve_user(user)
-        with open('reply.json') as reply_file:
-            req = json.load(reply_file, object_pairs_hook=OrderedDict)
+        req = self.reply_template.copy()
         req["push"]["conversation_iden"]["tag"] = tag
         req["push"]["message"] = msg
         req["push"]["source_user_iden"] = config["source_user_iden"]

@@ -7,7 +7,8 @@ import time
 import threading
 
 from ui import UI
-from feed import contacts
+#from whatsappCli import feed
+from whatsappCli.feed import contacts
 
 locale.setlocale(locale.LC_ALL,'')
 

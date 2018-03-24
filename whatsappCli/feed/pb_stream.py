@@ -18,7 +18,7 @@ def on_message(ws, message):
 
     data = json.loads(message)
 
-    if is_whatsapp(data):
+    if is_received(data):
         tag =   data["push"]["notification_tag"]
         title = data["push"]["title"]
         body =  data["push"]["body"].split('\n')
@@ -60,13 +60,27 @@ def on_open(ws):
     ### opened ###
     pass
 
-def is_whatsapp(data):
-    if data is not None and data["type"] == "push" and data["push"] is not None and data["push"]["type"] == "mirror" and data["push"]["package_name"] == "com.whatsapp" and data["push"]["notification_tag"] is not None:
+def is_received(data):
+    if data is not None and \
+       data.get("type") == "push" and \
+       data.get("push") and \
+       data["push"].get("type") == "mirror" and \
+       data["push"].get("package_name") == "com.whatsapp" and \
+       data["push"].get("notification_tag") and \
+       data["push"].get("title") and \
+       data["push"].get("body"):
         return True
     return False
 
 def is_sent(data):
-    if data is not None and data["type"] == "push" and data["push"] is not None and data["push"]["type"] == "messaging_extension_reply" and data["push"]["package_name"] == "com.pushbullet.android" and data["push"]["conversation_iden"] is not None and data["push"]["conversation_iden"]["tag"] is not None:
+    if data is not None and \
+       data.get("type") == "push" and \
+       data.get("push") and \
+       data["push"].get("type") == "messaging_extension_reply" and \
+       data["push"].get("package_name") == "com.pushbullet.android" and \
+       data["push"].get("conversation_iden") and \
+       data["push"]["conversation_iden"].get("tag") and \
+       data["push"].get("message"):
         return True
     return False 
 

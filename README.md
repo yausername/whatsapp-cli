@@ -8,9 +8,14 @@ Pushbullet API token can be generated from [here](https://www.pushbullet.com/#se
 
 Works with python2.7
 
+## Installation
+
+    python setup.py install
+
+
 Interactive(Curses) Mode - 
 
-    Usage: __main__.py [OPTIONS]
+    Usage: whatsapp-cli [OPTIONS]
     
     Options:
       --token TEXT  Pushbullet API token  [required]
@@ -21,7 +26,7 @@ Interactive(Curses) Mode -
 
 Command Line Mode - 
 
-	Usage: __main__.py [OPTIONS] COMMAND [ARGS]...
+	Usage: whatsapp-cli [OPTIONS] COMMAND [ARGS]...
 
 	Options:
 	  --token TEXT  Pushbullet API token  [required]
@@ -35,7 +40,7 @@ Command Line Mode -
 
 Commands Reference
 
-	Usage: __main__.py add [OPTIONS]
+	Usage: whatsapp-cli add [OPTIONS]
 
 	  Add a contact
 
@@ -45,7 +50,7 @@ Commands Reference
 	  --help   Show this message and exit.
 
 
-	Usage: __main__.py read [OPTIONS]
+	Usage: whatsapp-cli read [OPTIONS]
 
 	  Read messages from a person/group
 
@@ -54,7 +59,7 @@ Commands Reference
 	  --help   Show this message and exit.
 
 
-	Usage: __main__.py send [OPTIONS]
+	Usage: whatsapp-cli send [OPTIONS]
 
 	  Send message to a person/group
 
@@ -65,7 +70,7 @@ Commands Reference
 	  --help   Show this message and exit.
 
 
-	Usage: __main__.py users [OPTIONS]
+	Usage: whatsapp-cli users [OPTIONS]
 
 	  List all contacts
 

@@ -16,10 +16,12 @@ Tested with python2.7
 
 ## Installation
 
-    python setup.py install
+    pip install whatsapp-cli
 
 
-Interactive(Curses) Mode - 
+## Usage
+
+Interactive (Curses) Mode - 
 
     Usage: whatsapp-cli [OPTIONS]
     

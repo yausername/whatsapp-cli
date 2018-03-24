@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name = "whatsapp-cli",
-    version = "0.0.1",
+    version = "0.0.2",
     author = "Ritvik Saraf",
     author_email = "13ritvik@gmail.com",
     description = "CLI for whatsapp",
@@ -16,6 +16,7 @@ setup(
         'console_scripts': ['whatsapp-cli=whatsappCli.__main__:main'],
     },
     install_requires=[
+        'requests',
         'websocket-client',
         'click',
     ],

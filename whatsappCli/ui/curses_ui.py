@@ -114,7 +114,8 @@ class CursesUI(UI):
             self.windows[win_index].tail_on_thread(self.feeder.get(contacts[tag]), self.lock, tag)
 
     def __quit(self, command, win_index=0):
-        sys.exit()
+        curses.endwin()
+        os._exit(0)
 
     def __clear(self, command, win_index=0):
         self.windows[win_index].clear(self.lock)

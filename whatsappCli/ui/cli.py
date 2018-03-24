@@ -8,11 +8,12 @@ feeder = None
 
 @click.group(invoke_without_command=True)
 @click.option('--token', help='Pushbullet API token', required=True)
+@click.option('--dir', help='data directory (default is /tmp/whatsapp-cli)', default="/tmp/whatsapp-cli")
 @click.pass_context
-def cli(ctx, token):
+def cli(ctx, token, dir):
     global feeder
     ctx.obj['token'] = token
-    feeder = PBFeeder(token)
+    feeder = PBFeeder(token, dir)
     if ctx.invoked_subcommand is None:
         ui = CursesUI(feeder)
         ui.start()

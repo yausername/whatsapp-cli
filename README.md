@@ -1,12 +1,18 @@
 # whatsapp-cli
 
-This CLI uses [Pushbullet APIs](https://docs.pushbullet.com/) to receive and send messages.
+## Requirements
+  * This CLI uses [Pushbullet APIs](https://docs.pushbullet.com/) to receive and send messages.
 
-[Pushbullet App](https://play.google.com/store/apps/details?id=com.pushbullet.android) must be installed on your phone.
+  * [Pushbullet App](https://play.google.com/store/apps/details?id=com.pushbullet.android) must be installed on your phone.
 
-Pushbullet API token can be generated from [here](https://www.pushbullet.com/#settings/account)
+  * Pushbullet API token can be generated from [here](https://www.pushbullet.com/#settings/account)
 
-Works with python2.7
+  * You must be getting whatsapp notifications on your device for this to work.
+
+  * You need to receive at least one message after starting the application for seeding the conf (default location - /tmp/whatsapp-cli/conf) file
+
+
+Tested with python2.7
 
 ## Installation
 
@@ -19,6 +25,8 @@ Interactive(Curses) Mode -
     
     Options:
       --token TEXT  Pushbullet API token  [required]
+      --dir TEXT    data directory (default is /tmp/whatsapp-cli)
+      --help        Show this message and exit.
 
 ![](whatsapp-cli.gif)
 

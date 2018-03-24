@@ -15,9 +15,11 @@ from pkg_resources import resource_string
 class PBFeeder(Feeder):
     """ whatsapp chat feed using pushbullet"""
 
-    def __init__(self, pb_token):
+    def __init__(self, pb_token, dir="/tmp/whatsapp-cli"):
         self.pb_token = pb_token
-        self.dir = "/tmp"
+        if not os.path.exists(dir):
+            os.makedirs(dir)
+        self.dir = dir
         self.starting_lines = 10
         self.reply_template = json.loads(resource_string(__name__, 'data/reply.json'), object_pairs_hook=OrderedDict)
         self.__pb_start_stream()

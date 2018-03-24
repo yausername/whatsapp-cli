@@ -4,6 +4,7 @@ import io
 import logging
 import re
 import time
+import os
 
 logging.basicConfig()
 
@@ -160,9 +161,9 @@ def update_sent_msg(user, msg):
 def init(dir):
 
     global __f, __u, __c
-    msg_file = dir + "/msg"
-    usr_file = dir + "/usr"
-    cnf_file = dir + "/conf"
+    msg_file = os.path.join(dir,"msg")
+    usr_file = os.path.join(dir,"usr")
+    cnf_file = os.path.join(dir,"conf")
     __f = io.open(msg_file, mode='w+', encoding='utf-8')
     __u = io.open(usr_file, mode='a+', encoding='utf-8')
     __c = io.open(cnf_file, mode='a+', encoding='utf-8')

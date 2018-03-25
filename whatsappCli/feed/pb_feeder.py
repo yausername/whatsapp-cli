@@ -15,7 +15,7 @@ from pkg_resources import resource_string
 class PBFeeder(Feeder):
     """ whatsapp chat feed using pushbullet"""
 
-    def __init__(self, pb_token, dir="/tmp/whatsapp-cli"):
+    def __init__(self, pb_token, dir=os.path.join(os.path.expanduser("~"),".whatsapp-cli")):
         self.pb_token = pb_token
         if not os.path.exists(dir):
             os.makedirs(dir)

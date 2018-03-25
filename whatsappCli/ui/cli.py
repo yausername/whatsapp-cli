@@ -1,3 +1,4 @@
+import os
 import click
 from click import BadParameter
 
@@ -8,7 +9,7 @@ feeder = None
 
 @click.group(invoke_without_command=True)
 @click.option('--token', help='Pushbullet API token', required=True)
-@click.option('--dir', help='data directory (default is /tmp/whatsapp-cli)', default="/tmp/whatsapp-cli")
+@click.option('--dir', help='data directory (default is ~/.whatsapp-cli)', default=os.path.join(os.path.expanduser("~"),".whatsapp-cli"))
 @click.pass_context
 def cli(ctx, token, dir):
     global feeder

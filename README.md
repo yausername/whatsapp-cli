@@ -9,7 +9,7 @@
 
   * You must be getting whatsapp notifications on your device for this to work.
 
-  * You need to receive at least one message after starting the application for seeding the conf (default location - /tmp/whatsapp-cli/conf) file
+  * To be able to send messages you need to receive at least one message after starting the application for seeding the conf (default location ~/.whatsapp-cli/conf).
 
 
 Tested with python2.7
@@ -27,7 +27,7 @@ Interactive (Curses) Mode -
     
     Options:
       --token TEXT  Pushbullet API token  [required]
-      --dir TEXT    data directory (default is /tmp/whatsapp-cli)
+      --dir TEXT    data directory (default is ~/.whatsapp-cli)
       --help        Show this message and exit.
 
 ![](whatsapp-cli.gif)

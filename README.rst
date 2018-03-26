@@ -1,6 +1,14 @@
 whatsapp-cli
 ============
 
+Limitations
+-----------
+
+-  You cannot initiate chat with users from whom you have not received a
+   notification in the recent past. This is a pushbullet limitation as
+   it uses reply to notification to send messages. I need to explore on
+   using whatsapp web instead of pushbullet.
+
 Requirements
 ------------
 

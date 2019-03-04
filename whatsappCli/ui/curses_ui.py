@@ -339,3 +339,4 @@ class Window:
                        self.command_x = self.command_x + 1
                 else:
                     curses.beep()
+            time.sleep(0.04)

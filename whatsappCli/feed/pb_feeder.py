@@ -114,7 +114,7 @@ class PBFeeder(Feeder):
 			yield "\n"
 			#time.sleep(0.25)
 		    else:
-			#time.sleep(0.25)
+			time.sleep(0.04)
 			f.seek(where)
 		else:
 		    current_size = new_size

@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 setup(
     name = "whatsapp-cli",
     version = "0.1.2",
-    author = "Ritvik Saraf",
+    author = "yausername",
     author_email = "13ritvik@gmail.com",
     description = "CLI for whatsapp",
     long_description=open('README.rst').read(),

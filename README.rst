@@ -1,6 +1,9 @@
 whatsapp-cli
 ============
 
+[Disclaimer] This is not a usable solution. I will not be able to provide any support.
+-----------
+
 Limitations
 -----------
 

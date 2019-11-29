@@ -3,10 +3,11 @@ from setuptools import setup, find_packages
 
 setup(
     name = "whatsapp-cli",
-    version = "0.1.2",
+    version = "0.1.3",
     author = "yausername",
     description = "CLI for whatsapp",
-    long_description=open('README.rst').read(),
+    long_description=open('README.md').read(),
+    long_description_content_type="text/markdown",
     license = "MIT",
     keywords = [ "whatsapp", "pushbullet", "whatsapp cli", "chat bots" ],
     url = "https://github.com/yausername/whatsapp-cli",

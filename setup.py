@@ -5,7 +5,6 @@ setup(
     name = "whatsapp-cli",
     version = "0.1.2",
     author = "yausername",
-    author_email = "13ritvik@gmail.com",
     description = "CLI for whatsapp",
     long_description=open('README.rst').read(),
     license = "MIT",

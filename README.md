@@ -36,7 +36,7 @@ Interactive (Curses) Mode -
       --dir TEXT    data directory (default is ~/.whatsapp-cli)
       --help        Show this message and exit.
 
-![](whatsapp-cli.gif)
+![](demo.gif)
 
 ---
 
